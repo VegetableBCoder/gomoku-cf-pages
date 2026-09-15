@@ -1,0 +1,9 @@
+# 不随静态资源上传的文件（格式同 .gitignore，放在 assets 目录根）
+#
+# 最关键的是 .git/ —— 若被当作静态资源上传，任何人都能通过
+# /.git/config、/.git/HEAD 等路径读出仓库信息。
+
+.git/
+.gitignore
+.idea/
+.assetsignore
