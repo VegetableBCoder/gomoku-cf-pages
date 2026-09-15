@@ -1,0 +1,25 @@
+# 依赖与构建产物（本项目为纯静态站点，无构建步骤）
+node_modules/
+dist/
+.wrangler/
+.dev.vars
+
+# 编辑器 / IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# 操作系统
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# 日志与临时文件
+*.log
+temp/
+tmp/
+
+# 模型权重不入库 —— 已托管在 Cloudflare R2，页面通过绝对 URL 加载。
+# 忽略整个目录，避免误提交大文件（Pages 单文件上限 25 MiB）。
+models/
