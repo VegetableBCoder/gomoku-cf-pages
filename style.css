@@ -1,0 +1,151 @@
+:root {
+  --bg: #16181d;
+  --panel: #1f2229;
+  --line: #2c3038;
+  --text: #e6e8ec;
+  --muted: #9aa2b1;
+  --accent: #4a8cf7;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg);
+  color: var(--text);
+  font: 14px/1.6 "Segoe UI", "PingFang SC", "Microsoft YaHei", system-ui, sans-serif;
+}
+
+.app {
+  display: flex;
+  gap: 28px;
+  align-items: flex-start;
+  padding: 24px;
+  flex-wrap: wrap;
+}
+
+.panel {
+  width: 260px;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 20px;
+}
+
+h1 {
+  margin: 0;
+  font-size: 20px;
+  letter-spacing: .5px;
+}
+
+.sub {
+  margin: 4px 0 18px;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.row label {
+  color: var(--muted);
+  font-size: 13px;
+}
+
+select,
+input[type="number"] {
+  flex: 1;
+  min-width: 0;
+  background: #14161a;
+  color: var(--text);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  padding: 6px 8px;
+  font: inherit;
+}
+
+.buttons {
+  gap: 8px;
+  margin: 14px 0 4px;
+}
+
+button {
+  flex: 1;
+  background: #262a33;
+  color: var(--text);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  padding: 8px 10px;
+  font: inherit;
+  cursor: pointer;
+}
+
+button:hover:not(:disabled) {
+  border-color: var(--accent);
+  color: #fff;
+}
+
+button:disabled {
+  opacity: .45;
+  cursor: default;
+}
+
+.status-box {
+  margin-top: 14px;
+  padding: 12px;
+  background: #14161a;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  min-height: 78px;
+}
+
+#status {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.eval {
+  margin-top: 6px;
+  color: var(--muted);
+  font-size: 12px;
+  min-height: 32px;
+}
+
+.info {
+  margin-top: 12px;
+  color: var(--accent);
+  font-size: 12px;
+  font-family: ui-monospace, Consolas, monospace;
+  word-break: break-all;
+}
+
+.hint {
+  margin: 14px 0 0;
+  color: #6f7787;
+  font-size: 11.5px;
+  line-height: 1.7;
+}
+
+.board-wrap {
+  background: #dcb35c;
+  padding: 10px;
+  border-radius: 12px;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, .45);
+}
+
+canvas {
+  display: block;
+  border-radius: 6px;
+  cursor: pointer;
+}
